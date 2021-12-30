@@ -1,11 +1,30 @@
 ---
+# Tasks to complete before running roles
 - hosts: localhost
+  tags: always
   connection: local
   become: true
+  pre_tasks:
+    - name: pre-run | update package cache (arch)
+      tags: always
+      pacman: update_cache:yes
+      changed_when: False
+      when: ansible_distribution == "ArchLinux"
 
   tasks:
   - name: install packages
     package:
       name:
+        # - acpilight 
         - gtop
-        - htop
+        # - fish
+        # - kitty  
+        # - neovim
+        # - npm
+        # - python-pip
+        # - ranger
+        # - rofi
+        # - slack-desktop
+        # - spotify
+        # - stow
+        # - ttf-jetbrains-mono
