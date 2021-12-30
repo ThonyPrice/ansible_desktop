@@ -11,20 +11,9 @@
     changed_when: False
     when: ansible_distribution == "Archlinux"
 
-  tasks:
-  - name: install packages
-    package:
-      name:
-        # - acpilight 
-        - gtop
-        # - fish
-        # - kitty  
-        # - neovim
-        # - npm
-        # - python-pip
-        # - ranger
-        # - rofi
-        # - slack-desktop
-        # - spotify
-        # - stow
-        # - ttf-jetbrains-mono
+# Run roles
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+    - workstation
