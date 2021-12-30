@@ -5,11 +5,11 @@
   connection: local
   become: true
   pre_tasks:
-    - name: pre-run | update package cache (arch)
-      tags: always
-      pacman: update_cache:yes
-      changed_when: False
-      when: ansible_distribution == "ArchLinux"
+  - name: pre-run | update package cache (arch)
+    tags: always
+    pacman: update_cache:yes
+    changed_when: False
+    when: ansible_distribution == "ArchLinux"
 
   tasks:
   - name: install packages
