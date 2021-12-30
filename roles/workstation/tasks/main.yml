@@ -1,17 +1,16 @@
-- tasks:
-  - name: install packages
-    package:
-      name:
-        # - acpilight 
-        - gtop
-        # - fish
-        # - kitty  
-        # - neovim
-        # - npm
-        # - python-pip
-        # - ranger
-        # - rofi
-        # - slack-desktop
-        # - spotify
-        # - stow
-        # - ttf-jetbrains-mono
+- name: install packages
+  package:
+    name:
+      # - acpilight 
+      - gtop
+      # - fish
+      # - kitty  
+      # - neovim
+      # - npm
+      # - python-pip
+      # - ranger
+      # - rofi
+      # - slack-desktop
+      # - spotify
+      # - stow
+      # - ttf-jetbrains-mono
